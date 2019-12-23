@@ -45,7 +45,7 @@ class HomeComponent extends React.Component {
         // PARAMS - maybe a small sub header (commits)
 
         return repositories.map( ( repo, index ) => (
-            <div className={'card-component'} key={index}>
+            <div className={'card-component'} key={`repo--${index}`}>
                 <div className={'card--header'}>
                     <h3>{repo.name}</h3>
                 </div>

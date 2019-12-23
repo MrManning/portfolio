@@ -14,12 +14,23 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-component {
-  padding: 20px;
-  width: 200px;
-  height: 200px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  margin: 0 10px 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background: $colour__neutral--40;
+  cursor: pointer;
+  transition: box-shadow .15s linear, opacity .15s;
+
+  &:hover {
+    box-shadow: 0 3px 10px 0 rgba($colour__neutral--100, 0.3);
+  }
 }

@@ -5,6 +5,8 @@
     min-height: calc(100vh - 70px);
     min-width: 100%;
     position: relative;
+    padding: 20px 0;
+    overflow: hidden;
 
     &-content {
       min-height: calc(100vh - 70px);
