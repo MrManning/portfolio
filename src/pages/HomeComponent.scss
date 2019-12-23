@@ -1,0 +1,25 @@
+.section {
+  padding: 30px;
+
+  &--odd {
+    background: $colour__neutral--60;
+  }
+
+  &--even {
+    background: $colour__neutral--20;
+  }
+}
+
+.repository-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card-component {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
