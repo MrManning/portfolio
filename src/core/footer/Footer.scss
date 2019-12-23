@@ -1,0 +1,9 @@
+.footer-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $colour__neutral--100;
+  width: 100%;
+  height: 50px;
+  color: $colour__white;
+}

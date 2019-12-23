@@ -1,0 +1,14 @@
+.main {
+  min-height: calc(100vh - 70px);
+
+  .index {
+    min-height: calc(100vh - 70px);
+    min-width: 100%;
+    position: relative;
+
+    &-content {
+      min-height: calc(100vh - 70px);
+      overflow: hidden;
+    }
+  }
+}
