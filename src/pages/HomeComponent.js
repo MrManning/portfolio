@@ -15,25 +15,27 @@ class HomeComponent extends React.Component {
         super( props );
         this.state = {
             isLoading: true,
+            repositories: []
         };
     }
 
     componentDidMount() {
         const GITHUB_REPO = 'https://api.github.com/users/MrManning/repos';
+
         axios.get( GITHUB_REPO )
-            .then( response => response.json() )
             .then( ( response ) => {
                     const repositories = response.data;
                     this.setState( { isLoading: false, repositories: repositories } );
-                }
-            );
+            })
+            .catch(function(e) {
+              console.log("ERROR ", e);
+            });
     }
 
     getLoading() {
         return (
             <div className={'unknown'}>
                 <Logo className={'App-logo'} alt={'logo'}/>
-                <h1>Loading...</h1>
             </div>
         );
     }
@@ -42,8 +44,25 @@ class HomeComponent extends React.Component {
         window.open( link, '_blank', 'rel=noopener noreferrer' )
     }
 
+    render() {
+        const { isLoading } = this.state;
+        const loadingMessage = this.getLoading();
+        const repos = this.getRepositories();
+
+        const main = (
+            <div className={'home'}>
+            <h2>Projects</h2>
+                <div className={'repository-list'}>
+                    {repos}
+                </div>
+            </div>
+        );
+
+        return isLoading ? loadingMessage : main;
+    }
+
     getRepositories() {
-        const { repositories } = this.props.repositories;
+        const { repositories } = this.state;
 
         return repositories.map( ( repo, index ) => (
             <div className={'card-component'} key={`repo--${index}`}
@@ -65,23 +84,6 @@ class HomeComponent extends React.Component {
             </div>
         ) );
     }
-
-    render() {
-        const { isLoading } = this.props.isLoading;
-        const loadingMessage = this.getLoading();
-
-        const repos = this.getRepositories();
-
-        const main = (
-            <div className={'home'}>
-                <div className={'repository-list'}>
-                    {repos}
-                </div>
-            </div>
-        );
-
-        return isLoading ? loadingMessage : main;
-    }
 }
 
 HomeComponent.defaultProps = {
@@ -92,11 +94,6 @@ HomeComponent.defaultProps = {
 HomeComponent.propTypes = {
     isLoading: PropTypes.bool,
     repositories: PropTypes.array
-    // repositories: PropTypes.arrayOf(
-    //     PropTypes.shape( {
-    //         name: PropTypes.string
-    //     } )
-    // ),
 };
 
 export default HomeComponent

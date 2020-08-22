@@ -1,51 +1,51 @@
 .section {
-  padding: 30px;
+    padding: 30px;
 
-  &--odd {
-    background: $colour__neutral--60;
-  }
+    &--odd {
+        background: $colour__neutral--60;
+    }
 
-  &--even {
-    background: $colour__neutral--20;
-  }
+    &--even {
+        background: $colour__neutral--20;
+    }
 }
 
 .repository-list {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-  &-component {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 0 10px 20px;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    background: $colour__neutral--40;
-    cursor: pointer;
-    transition: box-shadow .15s linear, opacity .15s;
+    &-component {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 0 10px 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background: $colour__neutral--40;
+        cursor: pointer;
+        transition: box-shadow 0.15s linear, opacity 0.15s;
 
-    &:hover {
-      box-shadow: 0 3px 10px 0 rgba($colour__neutral--100, 0.3);
+        &:hover {
+            box-shadow: 0 3px 10px 0 rgba($colour__neutral--100, 0.3);
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
     }
 
-    h3 {
-      margin: 10px 0;
+    &--bubble {
+        &-item {
+            border-radius: 15px;
+            background: #48649e;
+            padding: 2px 8px;
+            display: inline-block;
+        }
     }
-  }
-
-  &--bubble {
-    &-item {
-      border-radius: 15px;
-      background: #61dafb;
-      padding: 2px 8px;
-      display: inline-block;
-    }
-  }
 }
