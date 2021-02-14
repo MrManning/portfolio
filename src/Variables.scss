@@ -6,18 +6,21 @@ $header-height: 70px;
 $header-height__mobile: 50px;
 $footer-height: 10px;
 $footer-height__mobile: 180px;
-
 // ------------------------------------
 // Colours
 // ------------------------------------
-
 // Black & white
 $colour__black: #000 !default;
-$colour__white: #fff !default;
-
-// Neutral
+$colour__white: #fff !default; // Neutral
 $colour__neutral--20: #f3f4f6 !default;
 $colour__neutral--40: #dfe3e7 !default;
 $colour__neutral--60: #8d939b !default;
 $colour__neutral--80: #555555 !default;
 $colour__neutral--100: #373737 !default;
+// ------------------------------------
+// Breakpoints
+// ------------------------------------
+$width-small: 576px;
+$width-medium: 768px;
+$width-large: 992px;
+$width-extra-large: 1200px;

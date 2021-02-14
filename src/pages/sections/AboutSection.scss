@@ -1,0 +1,51 @@
+.section {
+  $sect: &;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .img-cropper {
+    position: relative;
+
+    img {
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    @media screen and (min-width: $width-large) {
+      img {
+        height: 350px;
+        width: 350px;
+      }
+    }
+  }
+
+  .work {
+    &__list {
+      list-style: none;
+
+      li {
+        display: flex;
+      }
+
+      &-style {
+        height: 15px;
+        width: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+
+    &__period {
+      margin: 0 10px;
+    }
+
+    &__details {}
+  }
+}

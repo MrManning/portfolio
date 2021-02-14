@@ -7,9 +7,6 @@ class HeaderComponent extends React.Component {
             <div className={'header-component'}>
                 <header>
                     <div className={'hamburger-component'}></div>
-                    <div className={'header-component__img'}>
-                        <img src={'/Paris_BW.jpg'} className={'profile'} alt={'profile'}/>
-                    </div>
                     <div className={'header-component__container'}>
                         <div className={'header-component__nav'}>
                             <div className={'links'}>

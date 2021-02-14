@@ -1,25 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import Header from './header/HeaderComponent';
-import Footer from './footer/FooterComponent';
+import FooterSection from "../pages/sections/footer/FooterSection";
 
 class CoreComponent extends React.Component {
-    render() {
-        const children = this.props.children;
+  render() {
+    const children = this.props.children;
 
-        return (
-            <div className={'main'}>
-                <Header/>
-                <div className={'index'}>
-                    <div className={'index-content'}>
-                        {React.cloneElement( children, {} )}
-                    </div>
-                    <Footer/>
-                </div>
-            </div>
-        );
-    }
+    return (
+      <React.Fragment>
+        <div className={"index-content"}>
+          {React.cloneElement(children, {})}
+          <FooterSection />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
-
 
 export default CoreComponent;
