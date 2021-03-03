@@ -41,30 +41,39 @@ function AboutSection() {
             Here's a brief history of my employment:
             <ul className={"work__list"}>
               <li>
-                <span className={"work__list-style"} />
-                <div className={"work__period"}>Oct 2020 - Present</div>
+                <div className={"work__list-style"}></div>
+                <div className={"work__period"}>Oct. 2020 - Present</div>
                 <div className={"work__details"}>
-                  <h4>Nando's</h4>
+                  <h3>Nando's</h3>
                   <p>Software Engineer</p>
-                  <p></p>
+                  <p>
+                    Developing an end-to-end process for updating the menu using
+                    JavaScript and Rust
+                  </p>
                 </div>
               </li>
               <li>
-                <span className={"work__list-style"} />
-                <div className={"work__period"}>Oct 2019 - Sept 2020</div>
+                <div className={"work__list-style"}></div>
+                <div className={"work__period"}>Oct. 2019 - Sep. 2020</div>
                 <div className={"work__details"}>
-                  <h4>MOO</h4>
+                  <h3>MOO</h3>
                   <p>Software Engineer Associate</p>
-                  <p></p>
+                  <p>
+                    Developing and adding frontend features to an admin platform
+                    using JavaScript and React.js
+                  </p>
                 </div>
               </li>
               <li>
-                <span className={"work__list-style"} />
-                <div className={"work__period"}>Jul 2017 - Jul 2018</div>
+                <div className={"work__list-style"}></div>
+                <div className={"work__period"}>Jul. 2017 - Jul. 2018</div>
                 <div className={"work__details"}>
-                  <h4>We Create Digital</h4>
+                  <h3>We Create Digital</h3>
                   <p>Junior Web Developer</p>
-                  <p></p>
+                  <p>
+                    Creating and maintaining websites on my university degree
+                    placement year using PHP, Laravel and JavaScript
+                  </p>
                 </div>
               </li>
             </ul>
