@@ -38,13 +38,14 @@
 body,
 html {
   margin: 0;
-  padding: 0;
   height: 100%;
+  width: 100%;
   background: $colour__white;
   font-family: 'Open Sans';
   overflow: hidden;
   color: #fff;
-  // font-size: 14px;
+  padding: env(safe-area-inset);
+  position: static;
 }
 
 #root {
@@ -132,4 +133,11 @@ a {
     transform: rotate(225deg);
     margin: auto;
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
