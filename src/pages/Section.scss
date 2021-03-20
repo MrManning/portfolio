@@ -24,9 +24,10 @@
     align-items: center;
     justify-content: space-between;
   }
-  @media screen and (min-width: $width-medium) {
+
+  @media screen and (min-width: $width-large) {
     .content {
-      padding: 0 20% 2%;
+      padding: 0 15% 2%;
     }
   }
 
