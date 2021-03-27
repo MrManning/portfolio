@@ -1,29 +1,28 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import Core from './core/CoreComponent';
-import Home from './pages/HomePage';
-import NotFound from './pages/NotFound';
+import Layout from 'components/Layout';
+import Home from 'components/Home';
+import NotFound from 'components/NotFound';
 
 const componentMap = {
-    Core,
-    Home,
-    NotFound
+  Home,
+  NotFound,
 };
 
 function App() {
-    const pages = componentMap;
+  const pages = componentMap;
 
-    return (
-        <Router>
-            <pages.Core>
-                <Switch>
-                    <Route exact path={'/'} render={() => <pages.Home/>}/>
-                    <Route render={() => <pages.NotFound/>}/>
-                </Switch>
-            </pages.Core>
-        </Router>
-    );
+  return (
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/" render={() => <pages.Home />} />
+          <Route path="*" render={() => <pages.NotFound />} />
+        </Switch>
+      </Layout>
+    </Router>
+  );
 }
 
 export default App;

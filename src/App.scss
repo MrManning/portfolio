@@ -1,56 +1,39 @@
-@import 'Variables';
-@import 'core/header/Header';
-@import 'pages/Section';
-@import 'pages/sections/footer/Footer';
-@import 'pages/sections/ProjectSection';
-@import 'pages/sections/AboutSection';
+@import 'components/Variables';
+@import 'components/Section';
+@import 'components/Projects';
+@import 'components/About';
+
 @font-face {
-  font-family: 'Black Ops One';
-  src: url("./fonts/Black_Ops_One/BlackOpsOne-Regular.ttf") format('truetype');
+  font-family: 'Lato';
+  src: url("assets/fonts/Lato/Lato-Regular.ttf") format('truetype'),;
   font-weight: 400;
-  font-style: cursive;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  font-weight: 400;
+  src: url("assets/fonts/Lato/Lato-Black.ttf") format('truetype'),;
+  font-weight: 900;
   font-style: normal;
-  src: url("fonts/Lato/Lato-Regular.ttf") format('truetype'),;
-}
-@font-face {
-  font-family: 'Lato';
-  font-weight: 700;
-  font-style: normal;
-  src: url("fonts/Lato/Lato-Bold.ttf") format('truetype'),;
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-style: normal;
-  src: url("fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype'),;
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 700;
-  font-style: normal;
-  src: url("fonts/Open_Sans/OpenSans-Bold.ttf") format('truetype'),;
+  font-display: swap;
 }
 
 body,
 html {
+  position: static;
   margin: 0;
   height: 100%;
   width: 100%;
   background: $colour__white;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
+  font-size: 1rem;
   overflow: hidden;
   color: #fff;
-  padding: env(safe-area-inset);
-  position: static;
 }
 
 #root {
-  min-height: calc(100vh - 50px);
   position: absolute;
+  min-height: calc(100vh - 50px);
   top: 0;
   bottom: 0;
   left: 0;
@@ -61,20 +44,18 @@ html {
 .index-content {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: $colour__white;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin: auto;
+  display: block;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -82,20 +63,6 @@ a {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -106,38 +73,25 @@ a {
   }
 }
 
-.back-to-top {
-  background-color: #5d687e;
-  height: 35px;
-  width: 35px;
-  position: fixed;
-  bottom: 4vh;
-  right: 4vh;
-  z-index: 2;
-  border-radius: 10%;
-  border-color: none;
-  border-style: none;
-  cursor: pointer;
-
-  &::after {
-    border: solid #fff;
-    border-width: 0 4px 4px 0;
-    content: "";
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 3px;
-    bottom: 0;
-    transform: rotate(225deg);
-    margin: auto;
-  }
-}
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
   position: relative;
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+}
+
+@media screen and (min-width: $width-medium) {
+  h1 {
+    font-size: 58px;
+  }
+  h2 {
+    font-size: 42px;
+  }
 }
