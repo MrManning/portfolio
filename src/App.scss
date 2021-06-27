@@ -27,9 +27,22 @@ html {
   background: $colour__white;
   font-family: 'Lato';
   font-size: 1rem;
-  overflow: hidden;
+  // overflow: auto;
   color: #fff;
+  // overscroll-behavior: none;
 }
+
+// html {
+//   overflow: hidden;
+// }
+
+body {
+  overscroll-behavior: none;
+}
+
+// #root {
+//   overflow: auto;
+// }
 
 #root {
   position: absolute;
@@ -38,7 +51,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  overflow: auto;
+  overscroll-behavior: contain;
 }
 
 .index-content {

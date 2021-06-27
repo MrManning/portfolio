@@ -17,16 +17,26 @@
   }
 
   .content {
-    padding: 0 10% 2%;
+    // padding: 0 10% 2%;
     margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    /* iOS 11 */
-    padding-left: constant(safe-area-inset-left);
-    padding-right: constant(safe-area-inset-right);
+    // < iOS 11 
+    // padding: unquote('max(constant(safe-area-inset-top), 0px)') unquote('max(constant(safe-area-inset-right), 10%)') unquote('max(constant(safe-area-inset-bottom), 2%)') unquote('max(constant(safe-area-inset-left), 10%)');
+    // iOS 11
+    // padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right), 10%) max(env(safe-area-inset-bottom), 2%) max(env(safe-area-inset-left), 10%);
+  }
+
+  @supports(padding: max(0px)) {
+    .content {
+        padding-top: max(0px, env(safe-area-inset-top));
+        padding-left: max(10%, env(safe-area-inset-left));
+        padding-right: max(10%, env(safe-area-inset-right));
+        padding-bottom: max(2%, env(safe-area-inset-bottom));
+    }
   }
 
   @media screen and (min-width: $width-large) {
@@ -93,12 +103,12 @@
   }
 
   &--odd {
-    background-color: #182848;
+    background-color: #344462;
     color: #fff;
     z-index: 1;
 
     &::before {
-      background-color: #182848;
+      background-color: #344462;
       position: absolute;
       z-index: -1;
       content: "";
@@ -110,7 +120,7 @@
     }
 
     &::after {
-      background-color: #182848;
+      background-color: #344462;
       position: absolute;
       z-index: -1;
       content: "";
